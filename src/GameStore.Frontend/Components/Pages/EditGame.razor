@@ -1,5 +1,6 @@
 ﻿@page "/editgame"
 @page "/editgame/{id:int}"
+@rendermode InteractiveServer
 
 @inject NavigationManager NavigationManager
 @inject GamesClient GamesClient
@@ -59,9 +60,6 @@ else
 
     [SupplyParameterFromForm]
     private GameDetails? game { get; set; }
-
-    //private GenresClient genresClient = new();
-    //private GamesClient gamesClient = new();
 
     private Genre[]? genres;
     private string title = string.Empty;
